@@ -187,9 +187,7 @@ class CustomDialog(xbmcgui.WindowXMLDialog):
         print ('onClick: %s' % (control))
 
         if control == OK_BUTTON:
-            timeNow = xbmc.Player().getTime()
-            skipTotal = int(timeNow) + int(self.skipValue)
-            xbmc.Player().seekTime(int(skipTotal))			
+            xbmc.Player().seekTime(int(self.skipValue))			
 
         if control == NEW_BUTTON:
             dialog = xbmcgui.Dialog()
